@@ -2,6 +2,8 @@ const curDate = new Date();
 let curYear = curDate.getFullYear();
 let curMonth = curDate.getMonth() + 1;
 let maxYear = curYear + 1;
+let customerName;
+// let pickUpTime;
 
 document.addEventListener("DOMContentLoaded", () => {
   const calendar = new VanillaCalendar("#calendar", {
@@ -37,4 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
   calendar.init();
 });
 
-document.addEventListener("DOM");
+function getName() {
+  customerName = document.getElementById("customerName").value;
+  document.getElementById("result").innerHTML = "hi " + customerName;
+  let pickUpTime = document.getElementById("orderH2");
+  let buttonSoon = document.getElementById("button_soon");
+  let buttonLater = document.getElementById("button_later");
+  pickUpTime.style.display = "block";
+  buttonSoon.style.display = "block";
+  buttonLater.style.display = "block";
+}

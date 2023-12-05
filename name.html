@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Shippori+Mincho:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img class="logo" src="img/logo.png" height="45px">
+            <a href="name.html"><li><h3>Order</h3></li></a>
+            <li><h3>Menu</h3></li>
+        </ul>
+    </nav>
+    <div class="main-visual">
+        <img src="img/coffee-2.jpg">
+    </div>
+    <h2 id="nameH2">What is your name?</h2>
+    <input id="customerName" placeholder="first name">
+    <button id="customerButton" onclick="getName()">Next</button>
+    <h2 id="result"></h2>
+
+    <div id="pickUpTime">
+        <h2 id="orderH2">When are you planning to pick up your order?</h2>
+        <a href="order.html" id="button_soon"><button>Soon</button></a><br>
+        <a href="hors-d'oeuvre.html" id="button_later"><button>After Today</button></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

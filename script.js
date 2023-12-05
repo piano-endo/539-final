@@ -3,7 +3,6 @@ let curYear = curDate.getFullYear();
 let curMonth = curDate.getMonth() + 1;
 let maxYear = curYear + 1;
 let customerName;
-// let pickUpTime;
 
 document.addEventListener("DOMContentLoaded", () => {
   const calendar = new VanillaCalendar("#calendar", {

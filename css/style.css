@@ -189,6 +189,10 @@ body > div {
   touch-action: manipulation; */
 }
 
+.button-news:hover {
+  background-color: #cd326b;
+}
+
 footer {
   margin: 0px 16px 20px 16px;
   font-size: 14px;

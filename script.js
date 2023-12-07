@@ -1,7 +1,7 @@
 function home() {
   console.log("test");
   let currentRoot = window.location.protocol + "//" + window.location.host;
-  let homePage = currentRoot + "/index.html";
+  let homePage = currentRoot + "/539-final/index.html";
   window.open(homePage, "_self");
 }
 

@@ -11,25 +11,63 @@
 <body>
     <nav>
         <ul>
-            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px">
+            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px" onclick="home();">
             <a href="name.html"><li><h3>Order</h3></li></a>
             <li><h3>Menu</h3></li>
         </ul>
     </nav>
-    <div class="main-visual">
-        <img src="img/coffee-2.jpg" alt="a picture of kanban that reads coffee, brunch, and roastery">
+    <div class="question-container">
+        <div class="main-visual" id="question-visual">
+            <img src="img/london.jpg" alt="a picture of a coffee shop in london">
+        </div>
+        <div class="question-contents">
+            <div id="question-name">
+                <h2 class="animation"><span class="auto-type"></span></h2>
+                <input id="customerName" placeholder="first name" value=""><br>
+                <button id="customerButton" onclick="getName()">Next</button>
+                <h3 id="result"></h3>
+            </div>
+        </div>
     </div>
-    <h2 id="nameH2">What is your name?</h2>
-    <input id="customerName" placeholder="first name">
-    <button id="customerButton" onclick="getName()">Next</button>
-    <h2 id="result"></h2>
 
-    <div id="pickUpTime">
-        <h2 id="orderH2">When are you planning to pick up your order?</h2>
-        <a href="order.html" id="button_soon"><button>Soon</button></a><br>
-        <a href="hors-d'oeuvre.html" id="button_later"><button>After Today</button></a>
-    </div>
-
+    <footer>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Accessibility Policy</li>
+            <li>&copy Piano</li>
+        </ul>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+    <script>
+        // document.getElementById("customerButton").addEventListener("click", getName());
+        function getName() {
+            let customerName = document.getElementById("customerName").value;
+            if (customerName === "") {
+                document.getElementById("result").innerHTML = "Error: please enter your name";
+            }
+            else {
+                sessionStorage.setItem("customerName", customerName);
+
+                let msg = confirm("We are currently only accepting pickup orders. Is that fine?")
+                if (msg == true) {
+                    let currentRoot = window.location.protocol + "//" + window.location.host;
+                    let nextPage = currentRoot + "/order.html";
+                    window.open(nextPage, "_self");
+                }
+            }
+        }
+
+        let typed = new Typed(".auto-type", {
+            strings: ["What is your name?"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            onComplete: (self) => {
+                let cursor = document.getElementsByClassName("typed-cursor")[0];
+                cursor.style.animationPlayState = "paused";
+            },
+            loop: false,
+        })
+    </script>
 </body>
 </html>

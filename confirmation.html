@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <h2>Your order is confirmed</h2>
-    <a href="index.html"><button>Back to Home Page</button></a>
+<body onload="thanks()">
+    <nav>
+        <ul>
+            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px" onclick="home();">
+            <a href="name.html"><li><h3>Order</h3></li></a>
+            <li><h3>Menu</h3></li>
+        </ul>
+    </nav>
+    <div class="confirmation">
+        <div class="confirmation-visual">
+            <img src="img/tokyo.jpg">
+        </div>
+        <h2 class="thanks"></h2>
+        <h3 class="order"></h3>
+        <h3 class="memo">Come right away</h3>
+        <button class="backHome"><a href="index.html">Back to Home Page</a></button>
+    </div>
+    <footer>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Accessibility Policy</li>
+          <li>&copy Piano</li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -164,7 +164,10 @@ body > div {
   justify-content: center;
 }
 
-.button-news {
+.button-news,
+#customerButton,
+.confirmation_btn,
+.backHome {
   background-color: #5b5a70;
   border-radius: 8px;
   border-style: none;
@@ -189,8 +192,27 @@ body > div {
   touch-action: manipulation; */
 }
 
-.button-news:hover {
+.button-news:hover,
+#customerButton:hover,
+.confirmation_btn:hover,
+.backHome:hover {
   background-color: #cd326b;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.button-news:visited,
+#customerButton:visited,
+.confirmation_btn a:visited,
+.backHome a:visited {
+  color: #dbdcd0;
 }
 
 footer {
@@ -203,24 +225,159 @@ footer li {
   padding-bottom: 5px;
 }
 
-#orderH2,
-#button_soon,
-#button_later {
-  display: none;
+#customerName {
+  border: 0;
+  border-bottom: 2px solid #999999;
+  margin-bottom: 20px;
+  line-height: 50px;
+  font-size: larger;
+}
+
+#customerName:focus {
+  outline: none;
+}
+
+.question-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#question-visual img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.question-contents {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#question-name {
+  text-align: center;
+}
+
+.animation {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 760px) {
+  .question-container {
+    flex-flow: row;
+  }
+
+  .question-container #question-visual {
+    width: 50%;
+  }
+
+  .question-container #question-visual img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .question-contents {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.menu-visual {
+  height: 50vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    url("/img/menuのコピー.jpg"); */
+  background-image: url("/img/menuのコピー.jpg");
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.menu-visual h2 {
+  color: #000000;
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  text-align: left;
+}
+
+@media screen and (min-width: 400px) {
+  .menu-visual h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .menu-visual h2 {
+    font-size: 70px;
+  }
 }
 
 .menu-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
   gap: 20px;
+}
+
+#menu-item > h3 {
+  padding-top: 20px;
 }
 
 .menu-details {
   display: flex;
   flex-flow: column;
-  width: 320px;
+  width: 100%;
+}
+
+.menu-details-visual {
+  width: 100%;
+}
+
+.menu-details-visual img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-details > h2 {
+  font-size: 26px;
+  margin-top: 20px;
 }
 
 .menu-description {
-  width: 100%;
+  margin: 0px 20px 20px 20px;
+}
+
+#menu-picture {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-details button {
+  align-self: center;
+}
+
+.order,
+.memo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks {
+  margin-top: 20px;
+}
+
+.backHome {
+  align-self: center;
 }

@@ -7,48 +7,34 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="saveOrder()">
     <nav>
-        <ul>
-            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px">
-            <a href="name.html"><li><h3>Order</h3></li></a>
-            <li><h3>Menu</h3></li>
-        </ul>
+      <ul>
+          <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px" onclick="home();">
+          <a href="name.html"><li><h3>Order</h3></li></a>
+          <li><h3>Menu</h3></li>
+      </ul>
     </nav>
     <div class="menu-details">
-      <img src="img/coffee-1.jpg" width="300px" alt="a image of coffee mug that says coffee coffee coffee"/>
-      <h3>cafe latte</h3>
+      <div class="menu-details-visual">
+        <img
+          src="img/capuccino.jpg"
+          alt="a image of coffee mug that says coffee coffee coffee"
+        />
+      </div>
+      <h2 class="ordered-item">cafe latte</h2>
       <p class="menu-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ullamcorper eget
-        nulla facilisi etiam dignissim. Netus et malesuada fames ac turpis.
-        Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla.
-        Varius duis at consectetur lorem donec massa sapien faucibus et. Donec
-        pretium vulputate sapien nec sagittis aliquam malesuada. Eu feugiat
-        pretium nibh ipsum. Aliquet lectus proin nibh nisl condimentum. Vitae
-        elementum curabitur vitae nunc sed. Porta non pulvinar neque laoreet
-        suspendisse. Amet cursus sit amet dictum. Accumsan in nisl nisi
-        scelerisque eu ultrices. Faucibus ornare suspendisse sed nisi lacus sed
-        viverra. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed.
-        Tortor posuere ac ut consequat semper viverra. Amet purus gravida quis
-        blandit turpis cursus in hac habitasse. Tempus urna et pharetra pharetra
-        massa massa ultricies mi. Dictum sit amet justo donec enim. Sed faucibus
-        turpis in eu mi bibendum. In massa tempor nec feugiat nisl pretium fusce
-        id. Viverra suspendisse potenti nullam ac tortor. Egestas erat imperdiet
-        sed euismod nisi. Viverra aliquet eget sit amet tellus cras adipiscing.
-        Egestas purus viverra accumsan in nisl. Viverra accumsan in nisl nisi
-        scelerisque eu. Orci sagittis eu volutpat odio facilisis. Tristique
-        magna sit amet purus gravida quis blandit. Aliquam ultrices sagittis
-        orci a. Pretium nibh ipsum consequat nisl vel pretium. Libero enim sed
-        faucibus turpis in. Aenean et tortor at risus viverra adipiscing at.
-        Odio ut enim blandit volutpat maecenas. Risus quis varius quam quisque
-        id diam vel quam. Posuere sollicitudin aliquam ultrices sagittis.
-        Egestas maecenas pharetra convallis posuere morbi leo urna molestie.
-        Egestas diam in arcu cursus euismod quis viverra nibh. Cursus eget nunc
-        scelerisque viverra mauris in aliquam. Quis eleifend quam adipiscing
-        vitae. Diam maecenas sed enim ut sem viverra aliquet eget sit.
+        エスプレッソがピスタチオの風味を引き立て、香ばしい風味と相性の良さを感じられます。華やかなホワイトチョコレート風味のマスカルポーネチーズ入りホイップクリーム”メリークリーム”を乗せ、仕上げにモミの木に雪が降り積もる様子をイメージして、ピスタチオとホワイトチョコレートのパウダーをトッピングしました。
       </p>
-      <a href="confirmation.html"><button>Order</button></a>
+      <button class="confirmation_btn"><a href="confirmation.html">Order</a></button>
     </div>
+    <footer>
+      <ul>
+        <li>Privacy Policy</li>
+        <li>Accessibility Policy</li>
+        <li>&copy Piano</li>
+      </ul>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

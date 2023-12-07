@@ -7,34 +7,51 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="greeting()">
     <nav>
         <ul>
-            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px">
+            <img class="logo" src="img/logo.png" alt="logo of the website that says coffee shop in Japanese" height="45px" onclick="home();">
             <a href="name.html"><li><h3>Order</h3></li></a>
             <li><h3>Menu</h3></li>
         </ul>
     </nav>
-    <div class="main-visual">
-        <img src="img/coffee-2.jpg" alt="a picture of kanban that reads coffee, brunch, and roastery">
+    <div class="menu-visual">
+        <h2 class="greeting"></h2>
     </div>
+    <h2>MENU</h2>
     <div class="menu-container">
-        <a href="menu-details.html"><div id="menu1">
-            <img src="img/coffee-1.jpg" width="300px" alt="a image of coffee mug that says coffee coffee coffee">
-            <h3>cafe latte</h3>
+        <a href="menu-details.html"><div id="menu-item">
+            <div id="menu-picture">
+                <img src="img/capuccino.jpg" alt="a image of coffee mug that says coffee coffee coffee">
+            </div>
+            <h3>Capuccino</h3>
         </div></a>
-        <div id="menu1">
-            <a href="menu-details.html"><img src="img/coffee-1.jpg" width="300px" alt="a image of coffee mug that says coffee coffee coffee"></a>
-            <h3>cafe latte</h3>
-        </div>
-        <div id="menu1">
-            <a href="menu-details.html"><img src="img/coffee-1.jpg" width="300px" alt="a image of coffee mug that says coffee coffee coffee"></a>
-            <h3>cafe latte</h3>
-        </div>
-        <div id="menu1">
-            <a href="menu-details.html"><img src="img/coffee-1.jpg" width="300px" alt="a image of coffee mug that says coffee coffee coffee"></a>
-            <h3>cafe latte</h3>
-        </div>
+        <a href="menu-details.html"><div id="menu-item">
+            <div id="menu-picture">
+                <img src="img/contado.jpg" alt="a image of coffee mug that says coffee coffee coffee">
+            </div>
+            <h3>Contado</h3>
+        </div></a>
+        <a href="menu-details.html"><div id="menu-item">
+            <div id="menu-picture">
+                <img src="img/affogado.jpg" alt="a image of coffee mug that says coffee coffee coffee">
+            </div>
+            <h3>Affogado</h3>
+        </div></a>
+        <a href="menu-details.html"><div id="menu-item">
+            <div id="menu-picture">
+                <img src="img/coffee-3.jpg" alt="a image of coffee mug that says coffee coffee coffee">
+            </div>
+            <h3>Latte</h3>
+        </div></a>
     </div>
+    <footer>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Accessibility Policy</li>
+            <li>&copy Piano</li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
